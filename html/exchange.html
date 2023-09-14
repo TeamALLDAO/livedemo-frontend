@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange Page</title>
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+  </head>
+  <body>
+    <!-- start of navbar -->
+    <nav
+      style="
+        padding: 1rem 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      "
+    >
+      <!-- logo -->
+      <img src="../assets/nav.png" alt="alldao" />
+      <!-- nav-links -->
+      <div style="display: flex; flex-direction: row; align-items: center">
+        <a href="" style="color: white; margin-right: 45px">About Us</a>
+        <a href="" style="color: white; margin-right: 45px">Roadmap</a>
+        <a href="" style="color: white; margin-right: 45px">Whitepaper</a>
+        <!-- <a href="" style="color: white; margin-right: 10px">Demo</a> -->
+      </div>
+      <!-- login button -->
+      <button
+        id="login-button"
+        style="
+          border-radius: 10px;
+          color: white;
+          background-color: transparent;
+          border: 2.5px solid white;
+          width: auto;
+          height: 50px;
+          padding: 15px 50px;
+          cursor: pointer;
+        "
+      >
+        Login
+      </button>
+    </nav>
+    <!-- end of navbar -->
+    <main style="padding: 1rem 3rem; background: #f5f7fa">
+      <!-- main dao exchange -->
+      <div
+        style="
+          border-radius: 26px 26px 0px 0px;
+          border: 3px solid #777;
+          background: #fff;
+          padding: 3rem;
+          display: grid;
+        "
+      >
+        <div
+          style="
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 1.5rem;
+          "
+        >
+          <div
+            style="
+              width: 346px;
+              /* height: 373px; */
+              border-radius: 12px;
+              background: #a9a9a9;
+            "
+          ></div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 10px;
+            "
+          >
+            <h5 style="display: flex; gap: 4rem">
+              Dao Name
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                  "
+                >
+                  Decentralized Social Media Dao
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 3.5rem">
+              Dao Description
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                  "
+                >
+                  Decentralized Social Media DAO is a DAO focused on creating a
+                  decentralized social media platform that prioritizes user
+                  privacy and content ownership.
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 5rem">
+              Dao URI
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    color: blue;
+                    text-decoration: underline;
+                  "
+                >
+                  http://www.example.com/3456/my-dao
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 3rem">
+              Dao Address
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                  "
+                >
+                  0X346748CB8478ACB38479CBAE388F904783738483
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 2rem">
+              Token Address
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                  "
+                >
+                  0X7878686
+                </h5></span
+              >
+            </h5>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-top: 1rem">
+          <h5
+            id="showmoreExchangePage"
+            style="color: blue; text-decoration: underline; cursor: pointer"
+          >
+            SHOW MORE
+          </h5>
+        </div>
+      </div>
+      <!-- children one -->
+      <div
+        id="moreOne"
+        style="
+          border-right: 1px solid #777;
+          border-left: 1px solid #777;
+          background: #fff;
+          padding: 3rem;
+          display: none;
+        "
+      >
+        <div
+          style="
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1.5rem;
+          "
+        >
+          <div
+            style="
+              width: 346px;
+              /* height: 373px; */
+              border-radius: 12px;
+              background: #a9a9a9;
+            "
+          ></div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 10px;
+            "
+          >
+            <h5 style="display: flex; gap: 6rem">
+              Funder
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  0x56789...
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 4rem">
+              Funding ID
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  0X7878686
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 5rem">
+              Token ID
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  00000086
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 7rem">
+              Price
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  45 USD
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 3rem">
+              Qty Available
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  86
+                </h5></span
+              >
+            </h5>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: end; margin-top: 1rem">
+          <button
+            style="
+              padding: 20px 39px;
+              border-radius: 15px;
+              background: #00b131;
+              color: white;
+              border: none;
+            "
+          >
+            BUY
+          </button>
+        </div>
+      </div>
+      <!-- children two-->
+      <div
+        id="moreTwo"
+        style="
+          border-right: 1px solid #777;
+          border-left: 1px solid #777;
+          background: #efeded;
+          padding: 3rem;
+          display: none;
+        "
+      >
+        <div
+          style="
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1.5rem;
+          "
+        >
+          <div
+            style="
+              width: 346px;
+              /* height: 373px; */
+              border-radius: 12px;
+              background: #a9a9a9;
+            "
+          ></div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 10px;
+            "
+          >
+            <h5 style="display: flex; gap: 6rem">
+              Funder
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  0x56789...
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 4rem">
+              Funding ID
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  0X2228686
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 5rem">
+              Token ID
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  00000088
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 7rem">
+              Price
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  4500 USD
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 3rem">
+              Qty Available
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  1
+                </h5></span
+              >
+            </h5>
+            <h5 style="display: flex; gap: 7rem">
+              Buyer
+              <span
+                ><h5
+                  style="
+                    border-radius: 4px;
+                    border: 1px dashed #000;
+                    padding: 5px 10px;
+                    padding-right: 20vw;
+                  "
+                >
+                  0xfedcba...
+                </h5></span
+              >
+            </h5>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: end; margin-top: 1rem">
+          <button
+            style="
+              padding: 20px 39px;
+              border-radius: 15px;
+              background: #00b131;
+              color: white;
+              border: none;
+            "
+          >
+            BUY
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="../js/exchange.js"></script>
+  </body>
+</html>

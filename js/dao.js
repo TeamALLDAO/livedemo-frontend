@@ -7,8 +7,6 @@ if (formDataString2) {
   // Convert the JSON string to an object
   const formDataObject2 = JSON.parse(formDataString2);
 
-  console.log(formDataObject2);
-
 const daoName = formDataObject2["daoName"];
 const daoDescription = formDataObject2["daoDescription"];
 const dateCreated = formDataObject2["submissionDate"];
@@ -79,8 +77,6 @@ const communityLink = formDataObject2["chatLink"];
 if (newMemberFormDataString2) {
   const newMemberFormDataObject2 = JSON.parse(newMemberFormDataString2);
 
-  console.log(newMemberFormDataObject2);
-
   const memberTileElement = document.getElementById("memberTile");
 //   const memberAvatarElement = document.getElementById("memberAvatar");  
   const membersListElement = document.getElementById("membersList");
@@ -103,13 +99,9 @@ if (newMemberFormDataString2) {
 
     const memberCountElement = document.getElementById("memberCount");
 
-  console.log(memberCountElement.textContent);
-
 const currentCount = parseInt(memberCountElement.textContent);
 memberCountElement.textContent = currentCount + 1;
-
-
-  console.log(memberCountElement.textContent);
+  
 }
 
 
@@ -285,7 +277,7 @@ pollsTab.style.color = "#a0a0a0";
 
 pollsTab.addEventListener("click", ()=>{
   detailsSection.style.display = "none";
-detailsTab.style.color = "#a0a0a0";
+  detailsTab.style.color = "#a0a0a0";
   detailsTab.style.borderBottom = "none";
   detailsTab.style.fontWeight = "normal";
 
@@ -350,3 +342,19 @@ fundingProposalDropDownIcon.addEventListener("click", ()=>{
   paymentProposalDropDownText.style.display = "none";
   gorvernorProposalDropDownText.style.display = "none";
 });
+
+// proposals navigation
+const paymentProposalTab = document.getElementById("paymentProposalTab");
+
+const createPaymentProposalFormPopup = document.getElementById("createPaymentProposalFormPopup");
+
+const closeCreatePaymentProposalIcon = document.getElementById("closeCreatePaymentProposalPopupIcon");
+
+
+closeCreatePaymentProposalIcon.addEventListener("click", ()=>{
+  createPaymentProposalFormPopup.style.display = "none";
+});
+
+paymentProposalTab.addEventListener('click', ()=>{
+  createPaymentProposalFormPopup.style.display = "block"
+})

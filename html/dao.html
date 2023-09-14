@@ -106,21 +106,24 @@
               cursor: pointer;
             "
           >
-            Add Member</button
-          ><button
-            style="
-              margin-left: 20px;
-              border-radius: 15px;
-              border: none;
-              background-color: #00b131;
-              color: white;
-              font-weight: bold;
-              padding: 12px 30px;
-              cursor: pointer;
-            "
-          >
-            Exchange
+            Add Member
           </button>
+          <a href="../html/exchange.html"
+            ><button
+              style="
+                margin-left: 20px;
+                border-radius: 15px;
+                border: none;
+                background-color: #00b131;
+                color: white;
+                font-weight: bold;
+                padding: 12px 30px;
+                cursor: pointer;
+              "
+            >
+              Exchange
+            </button></a
+          >
         </div>
         <!-- popup -->
         <div
@@ -199,12 +202,12 @@
                 placeholder="Target Address"
               />
               <input
-                type="text"
+                type="number"
                 id="newMemberPercentAllocation"
                 name="newMemberPercentAllocation"
                 style="
                   margin-bottom: 20px;
-                  padding: 17px 302px 19px 20px;
+                  padding: 17px 30px 19px 20px;
                   border-radius: 25px;
                   background: #f3f3f3;
                   border: none;
@@ -501,11 +504,80 @@
               id="myChart"
               width="1200"
               height="389"
-              style="margin-bottom: 20rem"
+              style="margin-bottom: 5rem"
             ></canvas>
           </div>
           <!-- payments -->
-          <div></div>
+          <div
+            style="
+              border-radius: 20px;
+              background: #fff;
+              display: inline-block;
+              padding: 30px 25px 29px 25px;
+            "
+          >
+            <div style="display: flex">
+              <div style="display: flex; flex-direction: column; gap: 5px">
+                <h5>Payee</h5>
+                <h5>PaymentId</h5>
+                <h5>Amount</h5>
+                <h5>Installment</h5>
+                <h5>Interval</h5>
+                <h5>Delay</h5>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 5px;
+                  margin-left: 5px;
+                "
+              >
+                <h5>:</h5>
+                <h5>:</h5>
+                <h5>:</h5>
+                <h5>:</h5>
+                <h5>:</h5>
+                <h5>:</h5>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 5px;
+                  margin-left: 1.5rem;
+                "
+              >
+                <h5>0x56789...</h5>
+                <h5>000005</h5>
+                <h5>5000 USD</h5>
+                <h5>500 USD</h5>
+                <h5>14 days</h5>
+                <h5>01/01/2024</h5>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <button
+                style="
+                  padding: 10px 4rem;
+                  border-radius: 10px;
+                  background: #00b131;
+                  color: white;
+                  border: none;
+                  cursor: pointer;
+                  margin-top: 1.5rem;
+                "
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
         </div>
         <!-- proposals -->
         <div id="proposals" style="display: none">
@@ -652,11 +724,12 @@
               </div>
               <!-- payment -->
               <div
+                id="paymentProposalTab"
                 style="
                   border-radius: 10px;
                   background: #f3f3f3;
-
                   padding: 10px;
+                  cursor: pointer;
                 "
               >
                 <div
@@ -683,6 +756,242 @@
               </div>
             </div>
           </div>
+          <!-- live proposals or sutton -->
+          <div>
+            <div style="border: 2px solid #e9e2ff; padding: 24px">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <div style="display: flex; align-items: center">
+                  <div
+                    style="
+                      height: 30px;
+                      width: 30px;
+                      border-radius: 50%;
+                      background-color: #a0a0a0;
+                      margin-right: 5px;
+                    "
+                  ></div>
+                  <h5>0xfedcba...</h5>
+                </div>
+                <div
+                  style="
+                    color: #00b131;
+                    background-color: #efffed;
+                    border-radius: 25;
+                    padding: 10px 20px;
+                  "
+                >
+                  Executed
+                </div>
+              </div>
+              <div style="display: flex">
+                <h1>Monetizing content</h1>
+                <h5
+                  style="
+                    border-radius: 10px;
+                    background: #fffae7;
+                    color: #f1bd02;
+                    padding: 5px 10px;
+                    margin: auto;
+                    margin-left: 10px;
+                  "
+                >
+                  (Gorvenance)
+                </h5>
+              </div>
+              <h5 style="margin-bottom: 4rem">
+                To add a new feature that allows users to monetize their content
+                through a decentralized ad network
+              </h5>
+              <div style="display: flex; margin-bottom: 1rem">
+                <h5 style="margin-right: 4.4rem">Agree</h5>
+                <img
+                  src="../assets/ic_baseline-radio-button-checked.svg"
+                  alt="radio-button-true"
+                />
+                <div
+                  style="
+                    height: 0.5rem;
+                    width: 30%;
+                    background-color: #d9d9d9;
+                    margin: auto 20px;
+                  "
+                ></div>
+                <h5>32.45%</h5>
+              </div>
+              <div style="display: flex; margin-bottom: 4rem">
+                <h5 style="margin-right: 3rem">Disagree</h5>
+                <img
+                  src="../assets/ic_baseline-radio-button-unchecked.svg"
+                  alt="radio-button-false"
+                />
+                <div
+                  style="
+                    height: 0.5rem;
+                    width: 70%;
+                    background-color: #d9d9d9;
+                    margin: auto 20px;
+                  "
+                ></div>
+                <h5>67.55%</h5>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 10px">
+                <div><h5>Time Created : 13/09/2023 05:45PM UTC</h5></div>
+                <div><h5>Time Closed : 14/09/2023 05:45PM UTC</h5></div>
+              </div>
+            </div>
+          </div>
+          <!-- payment_proposal_form_popup -->
+          <div
+            id="createPaymentProposalFormPopup"
+            style="
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 73, 20, 0.85);
+            "
+          >
+            <!-- popup-content -->
+            <div
+              style="
+                position: absolute;
+                top: 50%;
+                left: 70%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                padding: 20px;
+                border-radius: 20px;
+
+                width: 469px;
+                height: auto;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                "
+              >
+                <h4 style="font-weight: bold; margin-bottom: 0.25rem">
+                  Make a payment
+                </h4>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    id="closeCreatePaymentProposalPopupIcon"
+                    src="../assets/close-icon.png"
+                    alt="close-icon"
+                    style="cursor: pointer"
+                  />
+                </div>
+              </div>
+              <p style="margin-bottom: 1rem">
+                Enter details of your transaction
+              </p>
+              <!-- payment_proposal_form -->
+              <form
+                id="paymentProposalForm"
+                style="display: flex; flex-direction: column"
+              >
+                <input
+                  type="text"
+                  id="payeeAddress"
+                  name="payeeAddress"
+                  style="
+                    margin-bottom: 20px;
+                    padding: 17px 30px 19px 20px;
+                    border-radius: 25px;
+                    background: #f3f3f3;
+                    border: none;
+                  "
+                  required
+                  placeholder="Payee Address"
+                />
+                <input
+                  type="number"
+                  id="paymentProposalAmount"
+                  name="paymentProposalAmount"
+                  style="
+                    margin-bottom: 20px;
+                    padding: 17px 30px 19px 20px;
+                    border-radius: 25px;
+                    background: #f3f3f3;
+                    border: none;
+                  "
+                  required
+                  placeholder="Amount"
+                /><input
+                  type="number"
+                  id="paymentProposalInstallmentAmount"
+                  name="paymentProposalInstallmentAmount"
+                  style="
+                    margin-bottom: 20px;
+                    padding: 17px 30px 19px 20px;
+                    border-radius: 25px;
+                    background: #f3f3f3;
+                    border: none;
+                  "
+                  required
+                  placeholder="Installment Amount"
+                /><input
+                  type="number"
+                  id="paymentProposalInterval"
+                  name="paymentProposalInterval"
+                  style="
+                    margin-bottom: 20px;
+                    padding: 17px 30px 19px 20px;
+                    border-radius: 25px;
+                    background: #f3f3f3;
+                    border: none;
+                  "
+                  required
+                  placeholder="Payment Interval"
+                />
+                <input
+                  type="date"
+                  id="PaymentProposalDelay"
+                  name="PaymentProposalDelay"
+                  style="
+                    margin-bottom: 20px;
+                    padding: 17px 30px 19px 20px;
+                    border-radius: 25px;
+                    background: #f3f3f3;
+                    border: none;
+                  "
+                  required
+                  placeholder="Payment Delay"
+                />
+                <button
+                  id="submitPaymentProposalForm"
+                  style="
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    background: #00b131;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                  "
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
         <!-- polls -->
         <div id="polls" style="display: none">polls</div>
@@ -692,6 +1001,7 @@
     <!-- footer -->
     <footer
       style="
+        display: none;
         background-color: black;
         padding: 1rem 3rem;
         padding-top: 5rem;
